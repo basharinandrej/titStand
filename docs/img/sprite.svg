@@ -378,4 +378,9 @@
             </clipPath>
         </defs>
     </symbol>
+
+    <symbol id="icon-close"  viewBox="0 0 17 16">
+        <rect x="0.980957" y="0.457855" width="0.647608" height="21.9798" rx="0.323804" transform="rotate(-45 0.980957 0.457855)" fill="#212121"/>
+        <rect width="0.647608" height="21.9798" rx="0.323804" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 16.9812 0.457855)" fill="#212121"/>
+    </symbol>
 </svg>

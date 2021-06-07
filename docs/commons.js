@@ -14009,8 +14009,11 @@ navList.addEventListener('click', function(e) {
         const logo = document.querySelector('.header__logo--js')
         logo.style.order = "-1"
         logo.style.marginRight = "24px"
+        logo.style.marginLeft = "unset"
+        logo.style.width = "auto"
         logo.querySelector('.logo__paragraph')?.remove('.logo__paragraph')
         logo.insertAdjacentHTML('beforeend', '<p class="logo__paragraph">blog</p>')
+
         navItem.classList.add('navigation-list__item--has-input')
         navList.classList.add('navigation-list--hide-children')
         isOpenInputForSearch = true
@@ -14023,7 +14026,9 @@ navList.addEventListener('click', function(e) {
         const logo = document.querySelector('.header__logo--js')
         logo.style.order = "unset"
         logo.style.marginRight = "auto"
-        logo.querySelector('.logo__paragraph').innerHTML = ' '
+        if (logo.querySelector('.logo__paragraph')) {
+            logo.querySelector('.logo__paragraph').innerHTML = ' '
+        }
     }
 })
 
@@ -14033,6 +14038,8 @@ document.addEventListener('click', e => {
         const logo = document.querySelector('.header__logo--js')
         logo.style.order = "unset"
         logo.style.marginRight = "auto"
+        logo.style.marginLeft = "auto"
+        logo.style.width = "201px"
         logo.querySelector('.logo__paragraph').innerHTML = ' '
 
         navList.classList.remove('navigation-list--hide-children')

@@ -132,20 +132,28 @@ h5.title {
   .main-btn--medium {
     font-size: 14px; } }
 
-.input__input {
-  background: #E1E5E9;
-  border: none;
-  font-size: 14px; }
-
-.input__input:focus {
-  outline: none; }
-
-.input__icon {
-  margin-right: 8px; }
+.input {
+  position: relative; }
+  .input__input {
+    background: #E1E5E9;
+    border: none;
+    font-size: 14px; }
+  .input__input:focus {
+    outline: none; }
+  .input__icon {
+    margin-right: 8px; }
+  .input__icon--close-icon {
+    background: #E1E5E9;
+    position: absolute;
+    right: -6px;
+    pointer-events: none; }
 
 @media (max-width: 768px) {
   .input__icon {
-    display: none; } }
+    display: none; }
+  .input__icon--close-icon {
+    display: block;
+    background: #fff; } }
 
 .mark {
   font-family: 'Raleway';
@@ -167,7 +175,19 @@ h5.title {
 
 .logo {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  text-decoration: none; }
+  .logo__paragraph {
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #212121;
+    margin-left: 8px; }
 
 .header {
   padding: 16px 0;
@@ -178,7 +198,9 @@ h5.title {
   .header__main-btn {
     margin-right: auto; }
   .header__logo {
-    margin-right: auto; }
+    margin-right: auto;
+    margin-left: auto;
+    width: 201px; }
 
 @media (max-width: 768px) {
   .header--open-input .header__logo {
@@ -204,6 +226,9 @@ h5.title {
 @media (max-width: 576px) {
   .main-btn--back .main-btn__icon {
     margin-right: 0; }
+  .header__logo {
+    display: flex;
+    justify-content: center; }
   .header__main-btn {
     font-size: 0; }
   .header--main-btn--no-gap {
@@ -211,6 +236,7 @@ h5.title {
 
 .blog-section {
   padding-top: 40px;
+  padding-bottom: 80px;
   background-color: #F0F2F4; }
   .blog-section__headline {
     margin-bottom: 40px; }
@@ -227,9 +253,7 @@ h5.title {
   .blog-section__main-btn:last-child {
     margin-right: 0; }
   .blog-section__list-preview {
-    margin: 0 -12px 80px 0; }
-  .blog-section__pagination {
-    margin-bottom: 80px; }
+    margin: 0 -12px 80px -12px; }
 
 h4.blog-section__title {
   font-family: 'Poiret One';
@@ -557,7 +581,7 @@ h5.footer__title {
     display: flex; }
   .footer__navigation {
     margin-right: 80px; }
-    .footer__navigation .navigation-list__item:hover .list__link {
+    .footer__navigation .navigation-list__item:not(.navigation-list__item--opacity):hover .list__link {
       color: #0F4C81; }
   .footer__social-network-list {
     margin-right: 80px; }

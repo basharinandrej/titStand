@@ -1218,7 +1218,7 @@ h5.footer__title {
     display: flex; }
   .footer__navigation {
     margin-right: 80px; }
-    .footer__navigation .navigation-list__item:hover .list__link {
+    .footer__navigation .navigation-list__item:not(.navigation-list__item--opacity):hover .list__link {
       color: #0F4C81; }
   .footer__social-network-list {
     margin-right: 80px; }

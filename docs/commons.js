@@ -13962,7 +13962,7 @@ for ( let i = 0; i<dropdowns.length; i++ ) {
     const dropdownHead = dropdowns[i].querySelector('.dropdown__head--js')
     const dropdownBody = dropdowns[i].querySelector('.dropdown__body--js')
     const heightBody = dropdownBody.clientHeight
-    const paddingGap = document.body.clientWidth < 768  ? 80 : 0
+    const paddingGap = document.body.clientWidth < 768  ? 80 : 30
     let isOpen = false
 
     if ( dropdowns ) {
@@ -13971,7 +13971,7 @@ for ( let i = 0; i<dropdowns.length; i++ ) {
         dropdownHead.addEventListener('click', () => {
             if (!isOpen) {
                 dropdownBody.style.height = heightBody + paddingGap + 'px'
-                console.log('heightBody', heightBody + paddingGap + 'px') // 400px
+                console.log('heightBody', heightBody + paddingGap + 'px')
                 isOpen = true
                 dropdowns[i].classList.add('active')
             } else {
@@ -13993,9 +13993,11 @@ for ( let i = 0; i<dropdowns.length; i++ ) {
 
 const navigationBlog = document.querySelector('.navigation--blog-js')
 const navList = navigationBlog.querySelector('.navigation-list--js')
+const closeIcon = navigationBlog.querySelector('.input__icon--close-icon')
 let isOpenInputForSearch = false
 
 navList.addEventListener('click', function(e) {
+    console.log(2);
     const navItem = e.target.closest('li')
     navList.classList.remove('navigation-list--hide-children')
     navList.querySelectorAll('.navigation-list__item--js').forEach(el => {
@@ -14005,8 +14007,8 @@ navList.addEventListener('click', function(e) {
     const target = navItem.dataset.type
     navItem.classList.add('active')
 
-    if (target === 'search') {
-        const logo = document.querySelector('.header__logo--js')
+    if ( target === 'search' ) {
+        const logo = document.querySelector('.header__logo--js' )
         logo.style.order = "-1"
         logo.style.marginRight = "24px"
         logo.style.marginLeft = "unset"
@@ -14032,7 +14034,8 @@ navList.addEventListener('click', function(e) {
     }
 })
 
-document.addEventListener('click', e => {
+const closeInput = e => {
+    console.log(1);
     const isTarget = !e.target.closest('.navigation--blog-js')
     if ( isTarget && isOpenInputForSearch ) {
         const logo = document.querySelector('.header__logo--js')
@@ -14052,7 +14055,9 @@ document.addEventListener('click', e => {
             header.classList.remove('header--open-input')
         }
     }
-})
+}
+
+document.addEventListener('click', closeInput)
 
 
 /***/ }),

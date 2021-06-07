@@ -412,7 +412,7 @@ h5.title {
   bottom: -50px; }
 
 .slide {
-  background-image: url(../../src/img/background_slide.png);
+  background-image: url(../img/background_slide.png);
   background-repeat: no-repeat;
   position: relative; }
   .slide__icon {

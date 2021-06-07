@@ -358,7 +358,7 @@ h1.header__title {
   color: #fff; }
 
 .header {
-  background-image: url(../../src/img/background_main_2.png);
+  background-image: url(../img/background_main_2.png);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
@@ -785,7 +785,7 @@ h4.example-profile__title {
     text-align: left; } }
 
 .section-premium {
-  background: url(../../src/img/background-premium.svg);
+  background: url(../img/background-premium.svg);
   padding: 160px 0; }
 
 .banner {
@@ -877,7 +877,7 @@ h4.example-profile__title {
   .section-about__title {
     margin-bottom: 87px; }
   .section-about__vector {
-    background-image: url(../../src/img/vector.svg);
+    background-image: url(../img/vector.svg);
     background-repeat: no-repeat;
     background-position: bottom;
     width: 100%;

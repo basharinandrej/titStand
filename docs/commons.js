@@ -13961,7 +13961,7 @@ const dropdowns = document.querySelectorAll('.dropdown--js')
 for ( let i = 0; i<dropdowns.length; i++ ) {
     const dropdownHead = dropdowns[i].querySelector('.dropdown__head--js')
     const dropdownBody = dropdowns[i].querySelector('.dropdown__body--js')
-    const heightBody = dropdownBody.clientHeight
+    const heightBody = dropdownBody.offsetHeight
     const paddingGap = document.body.clientWidth < 768  ? 80 : 30
     let isOpen = false
 

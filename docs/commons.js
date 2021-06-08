@@ -13961,26 +13961,28 @@ const dropdowns = document.querySelectorAll('.dropdown--js')
 for ( let i = 0; i<dropdowns.length; i++ ) {
     const dropdownHead = dropdowns[i].querySelector('.dropdown__head--js')
     const dropdownBody = dropdowns[i].querySelector('.dropdown__body--js')
-    const heightBody = dropdownBody.offsetHeight
-    const paddingGap = document.body.clientWidth < 768  ? 80 : 30
+    const heightBody = dropdownBody.scrollHeight
     let isOpen = false
 
     if ( dropdowns ) {
-        dropdownBody.style.height = '0'
+        dropdownBody.style.maxHeight = '0'
 
         dropdownHead.addEventListener('click', () => {
             if (!isOpen) {
-                dropdownBody.style.height = heightBody + 'px'
+                console.log('heightBody', heightBody);
+                dropdownBody.style.maxHeight = 'auto'
                 isOpen = true
                 dropdowns[i].classList.add('active')
             } else {
-                dropdownBody.style.height = '0'
+                dropdownBody.style.maxHeight = '0'
+                dropdownBody.style.transition = '.3s'
                 isOpen = false
                 dropdowns[i].classList.remove('active')
             }
         })
     }
 }
+
 
 /***/ }),
 

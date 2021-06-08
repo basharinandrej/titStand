@@ -81,6 +81,11 @@ body, p, h1, h2, h3, h4, h5, h6, ul, li {
 * {
   box-sizing: border-box; }
 
+.body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
 .container {
   max-width: 1186px;
   margin: 0 auto;
@@ -270,6 +275,11 @@ h6.title {
       padding: 8px 16px;
       border-radius: 8px; } }
 
+.dropdown.active .dropdown__body {
+  max-height: 200px !important;
+  transition: .5s;
+  height: unset; }
+
 .dropdown__head {
   padding: 20px 24px;
   background: #F0F2F4;
@@ -297,7 +307,8 @@ h6.title {
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  color: #212121; }
+  color: #212121;
+  transition: .5s; }
 
 .dropdown__head {
   display: flex;

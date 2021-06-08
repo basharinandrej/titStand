@@ -7,6 +7,11 @@ body, p, h1, h2, h3, h4, h5, h6, ul, li {
 * {
   box-sizing: border-box; }
 
+.body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
 .container {
   max-width: 1186px;
   margin: 0 auto;
@@ -425,6 +430,9 @@ h5.footer__title {
 @media (max-width: 460px) {
   .footer {
     padding: 24px 12px 24px 12px; } }
+
+.body__section-about {
+  flex-grow: 1; }
 
 .section-about {
   padding-bottom: 116px;

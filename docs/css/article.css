@@ -328,6 +328,8 @@ h6.title {
     display: flex; }
 
 @media (max-width: 768px) {
+  .input__icon--close-icon {
+    pointer-events: unset; }
   .input__icon {
     display: none; }
   .input__icon--close-icon {
@@ -885,20 +887,23 @@ h2.more-topic__title {
 
 @media (max-width: 768px) {
   .article__wrapper {
-    flex-direction: column; }
+    flex-direction: column;
+    margin-bottom: 0; }
   .article__img-box--vertical {
     width: 100%; }
   .article__img-box--no-gap-b {
     margin-bottom: 16px; }
   .article__paragraph--width {
     width: 100%; }
-  .more-topic__slider .slider-arrow {
-    top: unset;
-    bottom: -60px; }
-    .more-topic__slider .slider-arrow--next {
-      left: 55%; }
-    .more-topic__slider .slider-arrow--prev {
-      left: 45%; } }
+  .more-topic {
+    padding-top: 32px; }
+    .more-topic__slider .slider-arrow {
+      top: unset;
+      bottom: -60px; }
+      .more-topic__slider .slider-arrow--next {
+        left: 55%; }
+      .more-topic__slider .slider-arrow--prev {
+        left: 35%; } }
 
 @media (max-width: 576px) {
   .body__main-illustration {

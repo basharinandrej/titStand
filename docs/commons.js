@@ -14028,6 +14028,11 @@ input?.addEventListener('input', function() {
     }
 })
 
+if ( document.body.clientWidth < 768 ) {
+    closeIcon.addEventListener('touchstart click', () => {
+        input.value = ''
+    })
+}
 
 const closeInput = e => {
     const isTarget = !e.target.closest('.navigation--blog-js')

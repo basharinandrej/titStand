@@ -208,7 +208,6 @@ h6.title {
     color: rgba(33, 33, 33, 0.25);
     margin-bottom: 16px; }
   .preview-post__mark {
-    width: max-content;
     position: absolute;
     top: 16px;
     left: 16px; }

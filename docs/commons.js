@@ -14031,6 +14031,7 @@ input?.addEventListener('input', function() {
 if ( document.body.clientWidth < 768 ) {
     closeIcon.addEventListener('touchstart', () => {
         input.value = ''
+        closeIcon.classList.remove( 'show' )
     })
 }
 

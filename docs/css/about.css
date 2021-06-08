@@ -415,7 +415,7 @@ h5.footer__title {
     background-size: 100%; }
   .section-about__icon {
     margin: 0 auto 37px auto;
-    display: flex; }
+    display: block; }
   .section-about__title {
     width: 635px;
     margin-bottom: 32px; }

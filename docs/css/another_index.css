@@ -892,6 +892,18 @@ h3.example-profile__title {
   .example-profile__box-text--gap-r {
     margin-right: 0; } }
 
+@media (max-width: 460px) {
+  .example-profile--third .example-profile__paragraph {
+    min-width: 50%; }
+  .example-profile--third .example-profile__img-profile--mobile {
+    min-width: 45%; } }
+
+@media (max-width: 345px) {
+  .example-profile--first .example-profile__icon--mobile,
+  .example-profile--second .example-profile__icon--mobile,
+  .example-profile--third .example-profile__icon--mobile {
+    display: none; } }
+
 .section-premium {
   background: url(../img/background-premium.svg);
   padding: 160px 0; }

@@ -221,7 +221,8 @@ h6.title {
 
 .navigation--secondary .navigation-list__item {
   padding: 0;
-  margin-right: 40px; }
+  margin-right: 40px;
+  position: relative; }
 
 .navigation--secondary .navigation-list__item:last-child {
   margin-right: 0; }
@@ -229,11 +230,37 @@ h6.title {
 .navigation--secondary .navigation-list__link {
   padding: 10px 20px; }
 
-.navigation--secondary .navigation-list__item.active {
-  background: #E1E5E9;
-  position: relative; }
+.navigation--secondary .navigation-list__item:hover {
+  background: #F0F2F4; }
 
-.navigation--secondary .navigation-list__item.active:after {
+.navigation--secondary .navigation-list__item:hover:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  height: 30px;
+  top: -30px;
+  bottom: 0;
+  width: 100%;
+  right: 0;
+  left: 0;
+  background: #F0F2F4; }
+
+.navigation--secondary .navigation-list__item:hover:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  height: 26px;
+  top: 26px;
+  bottom: 0;
+  width: 100%;
+  right: 0;
+  left: 0;
+  background: #F0F2F4; }
+
+.navigation--secondary .navigation-list__item:active {
+  background: #E1E5E9; }
+
+.navigation--secondary .navigation-list__item:active:after {
   content: ' ';
   display: block;
   position: absolute;
@@ -245,7 +272,7 @@ h6.title {
   left: 0;
   background: #E1E5E9; }
 
-.navigation--secondary .navigation-list__item.active:before {
+.navigation--secondary .navigation-list__item:active:before {
   content: ' ';
   display: block;
   position: absolute;
@@ -256,6 +283,9 @@ h6.title {
   right: 0;
   left: 0;
   background: #E1E5E9; }
+
+.navigation--secondary .navigation-list__item.active .navigation-list__link {
+  color: #0F4C81; }
 
 .navigation--secondary .navigation-list__item--has-input:last-child {
   padding-left: 16px;

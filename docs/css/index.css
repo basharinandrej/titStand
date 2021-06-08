@@ -522,7 +522,8 @@ h6.title {
 
 @media (max-width: 768px) {
   .body .section-users {
-    margin-bottom: 64px; }
+    margin-bottom: 30px;
+    padding-bottom: 34px; }
   .section-users__switcher {
     margin-bottom: 32px; }
   .section-users__title {
@@ -880,7 +881,7 @@ h3.example-profile__title {
   .example-profile--third .example-profile__icon--mobile {
     display: flex;
     position: absolute;
-    bottom: -40px;
+    bottom: -70px;
     left: 22px; }
   .example-profile--third .example-profile__icon {
     margin-left: 0; }
@@ -1291,6 +1292,8 @@ h3.example-profile__title {
       margin-bottom: 24px; } }
 
 @media (max-width: 768px) {
+  .section-out-blog__list-posts {
+    margin-bottom: 32px; }
   .list-posts__paragraph {
     font-size: 20px;
     padding: 16px 16px 32px 16px; } }
@@ -1300,7 +1303,7 @@ h3.example-profile__title {
     display: none; }
   .list-posts__item {
     max-width: calc( 100% - 24px);
-    margin-bottom: 24px; } }
+    margin-bottom: 0; } }
 
 .section-question {
   padding: 40px 0 80px 0;
@@ -1427,10 +1430,8 @@ h5.footer__title {
     margin-left: 0; }
   .footer__social-network-list {
     margin-bottom: 36px; }
-  .footer__navigation {
-    margin-right: auto; }
-    .footer__navigation .list__item {
-      margin-right: 0; } }
+  .footer__navigation .list__item {
+    margin-right: 0; } }
 
 @media (max-width: 768px) {
   .footer {
@@ -1444,8 +1445,7 @@ h5.footer__title {
     .footer__navigation:nth-child(even) {
       margin-right: 0; }
     .footer__navigation:nth-child(odd) {
-      width: 40%;
-      margin-right: auto; }
+      width: 40%; }
     .footer__navigation:nth-child(n+2) {
       margin-bottom: 0; } }
 

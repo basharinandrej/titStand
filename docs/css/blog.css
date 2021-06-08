@@ -290,6 +290,12 @@ h4.blog-section__title {
   display: flex;
   justify-content: center; }
 
+@media (max-width: 768px) {
+  .blog-section {
+    padding-bottom: 32px; }
+    .blog-section__list-preview {
+      margin-bottom: 32px; } }
+
 .navigation--blog .navigation-list__item {
   padding: 0;
   margin-right: 40px; }
@@ -538,9 +544,7 @@ h4.blog-section__title {
 
 @media (max-width: 768px) {
   .preview-post__body {
-    padding: 16px 16px 32px 16px; }
-  .preview-post__paragraph {
-    font-size: 14px; } }
+    padding: 16px 16px 32px 16px; } }
 
 @media (max-width: 576px) {
   .preview-post__head {
@@ -666,10 +670,8 @@ h5.footer__title {
     margin-left: 0; }
   .footer__social-network-list {
     margin-bottom: 36px; }
-  .footer__navigation {
-    margin-right: auto; }
-    .footer__navigation .list__item {
-      margin-right: 0; } }
+  .footer__navigation .list__item {
+    margin-right: 0; } }
 
 @media (max-width: 768px) {
   .footer {
@@ -683,8 +685,7 @@ h5.footer__title {
     .footer__navigation:nth-child(even) {
       margin-right: 0; }
     .footer__navigation:nth-child(odd) {
-      width: 40%;
-      margin-right: auto; }
+      width: 40%; }
     .footer__navigation:nth-child(n+2) {
       margin-bottom: 0; } }
 

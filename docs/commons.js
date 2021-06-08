@@ -13970,8 +13970,7 @@ for ( let i = 0; i<dropdowns.length; i++ ) {
 
         dropdownHead.addEventListener('click', () => {
             if (!isOpen) {
-                dropdownBody.style.height = heightBody + paddingGap + 'px'
-                console.log('heightBody', heightBody + paddingGap + 'px')
+                dropdownBody.style.height = heightBody + 'px'
                 isOpen = true
                 dropdowns[i].classList.add('active')
             } else {

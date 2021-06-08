@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./css/blog.sass":
-/*!***********************!*\
-  !*** ./css/blog.sass ***!
-  \***********************/
+/***/ "./css/about.sass":
+/*!************************!*\
+  !*** ./css/about.sass ***!
+  \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -14,26 +14,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./js/blog.js":
-/*!********************!*\
-  !*** ./js/blog.js ***!
-  \********************/
+/***/ "./js/about.js":
+/*!*********************!*\
+  !*** ./js/about.js ***!
+  \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _css_blog_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @css/blog.sass */ "./css/blog.sass");
+/* harmony import */ var _css_about_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @css/about.sass */ "./css/about.sass");
 /* harmony import */ var _js_functions_openInputHead__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @js/functions/openInputHead */ "./js/functions/openInputHead.js");
 /* harmony import */ var _js_functions_openInputHead__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_functions_openInputHead__WEBPACK_IMPORTED_MODULE_1__);
 
 
-
-const previewArticleList = document.querySelector('.list-preview--js')
-
-previewArticleList.addEventListener('click', e => {
-    const target = e.target.closest('.preview-post--js').querySelector('.preview-post__body--js')
-    const href = target.getAttribute('href')
-    location.assign( href )
-})
 
 
 /***/ })
@@ -147,7 +139,7 @@ previewArticleList.addEventListener('click', e => {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"blog": 0
+/******/ 			"about": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -195,7 +187,7 @@ previewArticleList.addEventListener('click', e => {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["commons"], () => (__webpack_require__("./js/blog.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["commons"], () => (__webpack_require__("./js/about.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

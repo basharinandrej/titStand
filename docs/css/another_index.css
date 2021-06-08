@@ -409,6 +409,39 @@ h1.header__title {
   .header .head {
     margin-bottom: 80px; }
 
+@media (max-width: 1536px) and (max-height: 960px) {
+  .body .header {
+    height: calc(761px + 96px);
+    margin-bottom: 120px; }
+  .header__paragraph {
+    margin-bottom: 24px; } }
+
+@media (max-width: 1440px) and (max-height: 900px) {
+  .body .header {
+    margin-bottom: 120px;
+    height: calc(701px + 96px); } }
+
+@media (max-width: 1536px) and (max-height: 864px) {
+  .body .header {
+    height: calc(665px + 96px);
+    margin-bottom: 120px; }
+    .body .header__container {
+      background-size: 80%; } }
+
+@media (max-width: 1366px) and (max-height: 768px) {
+  .body .header {
+    height: calc(569px + 96px);
+    margin-bottom: 120px; }
+    .body .header__container {
+      background-size: 70%; } }
+
+@media (max-width: 1280px) and (max-height: 720px) {
+  .body .header {
+    margin-bottom: 120px;
+    height: calc(521px + 96px); }
+    .body .header__container {
+      background-size: 65%; } }
+
 @media (max-width: 768px) {
   .body .header {
     margin-bottom: 32px; }
@@ -1294,6 +1327,9 @@ h3.section-action__title {
     position: relative; }
   .social-network-list__item:last-child {
     margin-right: 0; }
+  .social-network-list__item:hover .social-network-list__icon {
+    fill: #0F4C81;
+    transition: .3s; }
   .social-network-list__icon {
     fill: rgba(33, 33, 33, 0.5); }
   .social-network-list--decoration .social-network-list__item:before {
@@ -1328,11 +1364,6 @@ h5.footer__title {
     margin-right: 80px; }
     .footer__navigation .navigation-list__item:not(.navigation-list__item--opacity):hover .list__link {
       color: #0F4C81; }
-  .footer__social-network-list {
-    margin-right: 80px; }
-    .footer__social-network-list .social-network-list__item:hover .social-network-list__icon {
-      fill: #0F4C81;
-      transition: .3s; }
   .footer__navigation:last-child {
     margin-right: 0; }
   .footer__wrapper {
@@ -1394,4 +1425,8 @@ h5.footer__title {
       margin-right: auto; }
     .footer__navigation:nth-child(n+2) {
       margin-bottom: 0; } }
+
+@media (max-width: 460px) {
+  .footer {
+    padding: 24px 12px 24px 12px; } }
 

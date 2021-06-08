@@ -13993,29 +13993,19 @@ for ( let i = 0; i<dropdowns.length; i++ ) {
 
 const navigationBlog = document.querySelector('.navigation--blog-js')
 const navList = navigationBlog.querySelector('.navigation-list--js')
-const closeIcon = navigationBlog.querySelector('.input__icon--close-icon')
+const closeIcon = navigationBlog.querySelector('.input__icon--close-js')
 let isOpenInputForSearch = false
 
 navList.addEventListener('click', function(e) {
-    console.log(2);
     const navItem = e.target.closest('li')
-    navList.classList.remove('navigation-list--hide-children')
     navList.querySelectorAll('.navigation-list__item--js').forEach(el => {
         el.classList.remove('active')
-        navItem.classList.remove('navigation-list__item--has-input')
+        navItem?.classList.remove('navigation-list__item--has-input')
     })
-    const target = navItem.dataset.type
+    const target = navItem?.dataset.type
     navItem.classList.add('active')
 
     if ( target === 'search' ) {
-        const logo = document.querySelector('.header__logo--js' )
-        logo.style.order = "-1"
-        logo.style.marginRight = "24px"
-        logo.style.marginLeft = "unset"
-        logo.style.width = "auto"
-        logo.querySelector('.logo__paragraph')?.remove('.logo__paragraph')
-        logo.insertAdjacentHTML('beforeend', '<p class="logo__paragraph">blog</p>')
-
         navItem.classList.add('navigation-list__item--has-input')
         navList.classList.add('navigation-list--hide-children')
         isOpenInputForSearch = true
@@ -14024,27 +14014,24 @@ navList.addEventListener('click', function(e) {
             const header = document.querySelector('.header--js')
             header.classList.add('header--open-input')
         }
-    } else {
-        const logo = document.querySelector('.header__logo--js')
-        logo.style.order = "unset"
-        logo.style.marginRight = "auto"
-        if (logo.querySelector('.logo__paragraph')) {
-            logo.querySelector('.logo__paragraph').innerHTML = ' '
-        }
     }
 })
 
+const input = navList.querySelector('.input__input--js')
+
+input?.addEventListener('input', function() {
+    if ( this.value.length > 0 ) {
+        closeIcon.classList.add( 'show' )
+    }
+    if ( this.value.length === 0 ) {
+        closeIcon.classList.remove( 'show' )
+    }
+})
+
+
 const closeInput = e => {
-    console.log(1);
     const isTarget = !e.target.closest('.navigation--blog-js')
     if ( isTarget && isOpenInputForSearch ) {
-        const logo = document.querySelector('.header__logo--js')
-        logo.style.order = "unset"
-        logo.style.marginRight = "auto"
-        logo.style.marginLeft = "auto"
-        logo.style.width = "201px"
-        logo.querySelector('.logo__paragraph').innerHTML = ' '
-
         navList.classList.remove('navigation-list--hide-children')
         navList.querySelectorAll('.navigation-list__item').forEach(el => {
             el.classList.remove('active')

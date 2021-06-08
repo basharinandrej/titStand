@@ -156,13 +156,15 @@ h6.title {
     background: #E1E5E9;
     position: absolute;
     right: -6px;
-    cursor: pointer; }
+    pointer-events: none;
+    display: none; }
+  .input__icon--close-icon.show {
+    display: flex; }
 
 @media (max-width: 768px) {
   .input__icon {
     display: none; }
   .input__icon--close-icon {
-    display: block;
     background: #fff; } }
 
 .mark {
@@ -182,6 +184,8 @@ h6.title {
   .mark--accent-color {
     background: #0F4C81;
     color: #fff; }
+  .mark__paragraph {
+    white-space: nowrap; }
 
 .logo {
   display: flex;
@@ -202,6 +206,8 @@ h6.title {
 .header {
   padding: 16px 0;
   background: #fff; }
+  .header__navigation {
+    min-width: 384px; }
   .header__container {
     display: flex;
     align-items: center; }
@@ -209,10 +215,18 @@ h6.title {
     margin-right: auto; }
   .header__logo {
     margin-right: auto;
-    margin-left: auto;
-    width: 201px; }
+    width: 201px;
+    margin-left: auto; }
+
+@media (max-width: 1300px) {
+  .header__logo {
+    width: unset; } }
 
 @media (max-width: 768px) {
+  .header__logo {
+    width: 201px; }
+  .header__navigation {
+    min-width: auto; }
   .header--open-input .header__logo {
     display: none; }
   .header--open-input .header__navigation {
@@ -317,7 +331,8 @@ h4.blog-section__title {
 
 .navigation--blog .navigation-list__item--has-input:last-child {
   padding-left: 16px;
-  padding-right: 16px; }
+  padding-right: 16px;
+  margin-left: auto; }
 
 .navigation--blog .navigation-list__item--has-input .navigation-list__input {
   display: none; }
@@ -425,6 +440,9 @@ h4.blog-section__title {
     position: relative; }
   .social-network-list__item:last-child {
     margin-right: 0; }
+  .social-network-list__item:hover .social-network-list__icon {
+    fill: #0F4C81;
+    transition: .3s; }
   .social-network-list__icon {
     fill: rgba(33, 33, 33, 0.5); }
   .social-network-list--decoration .social-network-list__item:before {
@@ -607,11 +625,6 @@ h5.footer__title {
     margin-right: 80px; }
     .footer__navigation .navigation-list__item:not(.navigation-list__item--opacity):hover .list__link {
       color: #0F4C81; }
-  .footer__social-network-list {
-    margin-right: 80px; }
-    .footer__social-network-list .social-network-list__item:hover .social-network-list__icon {
-      fill: #0F4C81;
-      transition: .3s; }
   .footer__navigation:last-child {
     margin-right: 0; }
   .footer__wrapper {
@@ -673,4 +686,8 @@ h5.footer__title {
       margin-right: auto; }
     .footer__navigation:nth-child(n+2) {
       margin-bottom: 0; } }
+
+@media (max-width: 460px) {
+  .footer {
+    padding: 24px 12px 24px 12px; } }
 

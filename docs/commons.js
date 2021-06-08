@@ -14029,7 +14029,7 @@ input?.addEventListener('input', function() {
 })
 
 if ( document.body.clientWidth < 768 ) {
-    closeIcon.addEventListener('touchstart click', () => {
+    closeIcon.addEventListener('touchstart', () => {
         input.value = ''
     })
 }

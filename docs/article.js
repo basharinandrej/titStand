@@ -57,6 +57,14 @@ _modules_jquery__WEBPACK_IMPORTED_MODULE_2___default()('.list-preview--js').slic
     ]
 })
 
+const previewArticleList = document.querySelector('.list-preview--js')
+
+previewArticleList.addEventListener('click', e => {
+    const target = e.target.closest('.preview-post--js').querySelector('.preview-post__body--js')
+    const href = target.getAttribute('href')
+    location.assign( href )
+})
+
 
 /***/ })
 

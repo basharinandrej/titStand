@@ -550,7 +550,9 @@ h6.title {
 
 @media (max-width: 768px) {
   .head__navigation {
-    display: none; } }
+    display: none; }
+  .cabinet-nav .list__item:last-child {
+    padding: 0; } }
 
 .list {
   display: flex;

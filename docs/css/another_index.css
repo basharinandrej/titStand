@@ -898,7 +898,8 @@ h3.example-profile__title {
   .example-profile--third .example-profile__paragraph {
     min-width: 50%; }
   .example-profile--third .example-profile__img-profile--mobile {
-    min-width: 45%; } }
+    min-width: 140px;
+    width: 45%; } }
 
 @media (max-width: 345px) {
   .example-profile--first .example-profile__icon--mobile,
